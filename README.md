@@ -236,3 +236,6 @@ After you are done with your lab, head over to the CodeStar console and delete t
 # 8. Conclusion
 
 In this lab you have learned creating end-to-end development tools using AWS CloudStar and understanding how to control canary deployments for Lambda using CloudWatch alarms.
+
+You can learn more about the topic at [Gradual Code Deployment
+](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/automating-updates-to-serverless-apps.html)
