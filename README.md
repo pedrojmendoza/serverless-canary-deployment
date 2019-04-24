@@ -224,8 +224,10 @@ git push
 33.	Wait for our Continuous Deployment pipeline to reach the deploy phase. During the 10 minutes that our new version (the one with the delay) is being deployed in canary, go and refresh the browser hitting the web service until you get the delayed version (again, you might need to try several times). If our alarm is working correctly, then we should see the deployment failing and the service rolling back to previous version (before the introduction of the delay)
 
  ![](images/canary_error.png) 
+ 
+34. Confirm that the CloudWatch Alarm has been triggered by visiting the CloudWatch console and locating your alarm. You can dive deep and see its History  
 
-34. Congratulations, you have completed the lab.
+35. Congratulations, you have completed the lab.
 
 <a name="cleanup"></a>
 # 7. Clean up
