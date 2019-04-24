@@ -1,7 +1,7 @@
 <img src="images/aws.jpg" align="center" width="200" alt="Serverless Bytes | Canary deployment for serverless">
 
 # serverless-canary-deployment
-Demo on using CodeDeploy to implement canary deployments in lambda
+Demo on using CodeDeploy to implement canary deployments in lambda. It includes a section that should be fullfilled by the reader as an exercise.
 
 Table of Contents
 
@@ -175,7 +175,7 @@ Globals:
         - !Ref TooSlowAlarm
 ```
 
-26. Next, in the same `template.yml` file you should add the _TooSlowAlarm_ resource being referenced above. You can refer to [Safe Lambda deployments](https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst) for some guidance
+26. Next, ***as an exercise to the reader***, in the same `template.yml` file you should add the _TooSlowAlarm_ resource being referenced above. You can refer to [Safe Lambda deployments](https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst) for some guidance
 
 27. Before we push our changes, we should attach new permissions to the IAM Role being used by CloudFormation to deploy our stack in order to include the ability to add new CloudWatch Alarms (as well as modifying the CodeDeploy configuration). To do so, go to the IAM Console and, under Roles, search for _CodeStarWorker-canary-lab-CloudFormation_ and modify it to Allow the following Actions on every Resource:
 - codedeploy:UpdateDeploymentGroup
