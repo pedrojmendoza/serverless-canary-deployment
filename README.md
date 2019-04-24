@@ -58,19 +58,17 @@ In this hands-on lab, we are going to start with a Hello World Python web servic
 5. If this is the first time you use the service, you will be prompted to create the required service roles for AWS Code \* services. Select **Yes, create role**.
 
 6. Choose a project template:
-Under _Application Category_ select _Web Service_
-Under _Programming Languages_ select _Python_
-Pick _Python Web Service AWS Lambda (running serverless)._
+- Under _Application Category_ select _Web Service_
+- Under _Programming Languages_ select _Python_
+- Pick _Python Web Service AWS Lambda (running serverless)._
 
 7. Enter the project details:
-
-Project name: _canary-lab_
-
-Which repository do you want to use? _AWS CodeCommit._
-
-Click **Next**.
+- Project name: _canary-lab_
+- Which repository do you want to use? _AWS CodeCommit._
+- Click **Next**.
 
 8. Leave everything as the default and click on **Create Project**. If this is the first time you use the service, you will also be prompted to enter your display name and email.
+
 9. We are going to use AWS Cloud9 as our IDE. Select AWS Cloud9 and hit **Next.**
 
 10. For our instance, we will select _t2.micro_. We will leave the networking settings as default which will launch the instance in our default VPC in a public subnet. Under _Cost-saving_ settings, observe that the environment will be automatically shut down after 30 minutes. Click **Next**.
@@ -177,11 +175,10 @@ Globals:
 
 26. Next, in the same `template.yml` file you should add the _TooSlowAlarm_ resource being referenced above. You can refer to [Safe Lambda deployments](https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst) for some guidance
 
-27. Before we push our changes, we should attach new permissions to the IAM Role being used by CloudFormation to deploy our stack in order to include the ability to add new CloudWatch Alarms (as well as modifying the CodeDeploy configuration). To do so, go to the IAM Console and, under Roles, search for _CodeStarWorker-canary-lab-CloudFormation_ and modify it to Allow the following Actions on every (i.e. *****) Resource:
-
-**codedeploy:UpdateDeploymentGroup**
-**cloudwatch:PutMetricAlarm**
-**cloudwatch:DeleteAlarms**
+27. Before we push our changes, we should attach new permissions to the IAM Role being used by CloudFormation to deploy our stack in order to include the ability to add new CloudWatch Alarms (as well as modifying the CodeDeploy configuration). To do so, go to the IAM Console and, under Roles, search for _CodeStarWorker-canary-lab-CloudFormation_ and modify it to Allow the following Actions on every Resource:
+- codedeploy:UpdateDeploymentGroup
+- cloudwatch:PutMetricAlarm
+- cloudwatch:DeleteAlarms
 
 28. Commit our latest changes to AWS CodeCommit again.
 
