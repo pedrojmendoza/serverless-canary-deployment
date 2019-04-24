@@ -1,4 +1,4 @@
- ![](images/aws.jpg) 
+<img src="images/aws.jpg" align="center" width="200" alt="Serverless Bytes | Canary deployment for serverless">
 
 # serverless-canary-deployment
 Demo on using CodeDeploy to implement canary deployments in lambda
