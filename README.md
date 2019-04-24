@@ -40,18 +40,21 @@ In this Lab, you will experience:
 <a name="intro"></a>
 # 2. Introduction
 
-In this hands-on lab, we are going to start with a Hello World node.js serverless app that returns a static web page. As part of this lab, we will be developing, testing, debugging and deploying a new serverless function for adding 2 numbers. The high level architecture is as follows:
+In this hands-on lab, we are going to start with a Hello World Python web service that returns a static JSON payload. As part of this lab, we will be developing and deploying some modifications to the function and we will next proceed to extend our deployment mechanism (based on canary deployment) to include a CloudWatch alarm that will act as a safety net to ensure we do not deploy an incorrect implementation (from the performance perspective). The high level architecture is as follows:
+
+ ![](images/arch.png) 
 
 <a name="devtool"></a>
 # 3. Launching a development toolchain using AWS CodeStar
 
 1. Sign into the AWS Management Console [https://console.aws.amazon.com/](https://console.aws.amazon.com/).
 
-**Note:** For this lab you will need to use an IAM user and not a federated user account. The account will require _AWSCodeStarFullAccess_ managed policy. Alternatively, you can create projects if you have an IAM administrative user with full permissions for all AWS Services (_AdministratorAccess_ managed policy). For more information, see [Setting up AWS Code Star (Step 3: Create or Use an IAM User).](https://docs.aws.amazon.com/codestar/latest/userguide/setting-up.html#setting-up-create-iam-user)
-
 2. In the upper-right corner of the AWS Management Console, confirm you are in the desired AWS region (e.g., N. Virginia).
+
 3. Click on **AWS CodeStar** from the list of all services.
+
 4. Click on **Start a project**.
+
 5. If this is the first time you use the service, you will be prompted to create the required service roles for AWS Code \* services. Select **Yes, create role**.
 
 6. Choose a project template:
@@ -222,6 +225,8 @@ git push
 ```
 
 33.	Wait for our Continuous Deployment pipeline to reach the deploy phase. During the 10 minutes that our new version (the one with the delay) is being deployed in canary, go and refresh the browser hitting the web service until you get the delayed version (again, you might need to try several times). If our alarm is working correctly, then we should see the deployment failing and the service rolling back to previous version (before the introduction of the delay)
+
+ ![](images/canary_error.png) 
 
 34. Congratulations, you have completed the lab.
 
