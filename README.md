@@ -104,7 +104,7 @@ To set your display email run "git config --global user.email YOUR_EMAIL_ADDRESS
 user:~/environment $
 ```
 
-17. We are going to modify the lambda implementing the service to introduce a small change. Open the `index.py` file and modify it as follows (basically, modifying the msg being returned):
+17. We are going to modify the lambda implementing the service to introduce a small change. Open the `index.py` file and modify it as follows (basically, modifying the msg being returned to include your city of preference):
 
 ```
 import json
