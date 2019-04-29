@@ -1,6 +1,6 @@
 <img src="images/aws.jpg" align="center" width="200" alt="Serverless Bytes | Canary deployment for serverless">
 
-# serverless-canary-deployment
+# Using Canary Deployment in Serverless Applications
 Demo on using CodeDeploy to implement canary deployments in lambda. It includes a section that should be fullfilled by the reader as an exercise.
 
 Table of Contents
